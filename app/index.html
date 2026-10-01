@@ -2,16 +2,35 @@
 <html lang="bg">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <title>Групкар Мобил</title>
+
+  <!-- PWA конфигурация за Android Chrome -->
+  <link rel="manifest" href="https://groupcare-companion.lovable.app/manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Групкар Мобил">
+  <meta name="theme-color" content="#0F172A">
+
+  <!-- Икони за Android -->
+  <link rel="icon" type="image/png" sizes="192x192" href="https://groupcare-companion.lovable.app/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="https://groupcare-companion.lovable.app/android-chrome-512x512.png">
+
+  <!-- PWA конфигурация за iOS / iPhone Safari -->
+  <link rel="apple-touch-icon" href="https://groupcare-companion.lovable.app/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Групкар Мобил">
+
   <style>
     html, body {
       margin: 0;
       padding: 0;
       width: 100%;
       height: 100%;
+      height: 100dvh;
       overflow: hidden;
       background-color: #0F172A;
+      -webkit-tap-highlight-color: transparent;
     }
     iframe {
       width: 100%;
