@@ -121,17 +121,17 @@
 </head>
 <body>
 
-<header class="topbar" style="background: #002b4e; padding: 10px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
-    <div class="in" style="width: min(1080px, 100% - 32px); margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+<header class="topbar" style="background: #002b4e; padding: 10px 12px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+    <div class="in" style="width: 100%; max-width: 1080px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 8px;">
         
-        <!-- Лого и име, слети в горната лента -->
-        <a class="brand" href="novini.html" style="display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none;">
-            <img src="3AC45443-3860-41A0-8AAF-49FAE280AC34.png" alt="Групкар Мобил" style="height: 40px; width: auto; border-radius: 6px; object-fit: contain;">
-            <span style="font-weight: 800; font-size: 16px; letter-spacing: 0.5px;">Групкар . МОБИЛ</span>
+        <!-- Лого и име (защитени с white-space: nowrap, за да не се чупят на нов ред) -->
+        <a class="brand" href="novini.html" style="display: flex; align-items: center; gap: 8px; color: #fff; text-decoration: none; white-space: nowrap; overflow: hidden;">
+            <img src="3AC45443-3860-41A0-8AAF-49FAE280AC34.png" alt="Групкар Мобил" style="height: 36px; width: auto; border-radius: 4px; object-fit: contain;">
+            <span style="font-weight: 800; font-size: 15px; letter-spacing: 0.3px;">Групкар . МОБИЛ</span>
         </a>
         
-        <!-- Бутон за запазване на час -->
-        <a class="btn navy" href="https://grupcar07.com/app/" style="background: #2bb6e6; color: #fff; padding: 8px 16px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 14px;">Запази час</a>
+        <!-- Бутон за запазване на час (с фиксиран размер, за да не се свива) -->
+        <a class="btn navy" href="https://grupcar07.com/app/" style="background: #2bb6e6; color: #fff; padding: 6px 12px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 13px; white-space: nowrap; flex-shrink: 0;">Запази час</a>
         
     </div>
 </header>
