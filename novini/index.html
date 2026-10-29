@@ -546,12 +546,25 @@
         </article>
     </section>
 
-    <!-- Навигация между страниците (общо 4 страници) -->
-    <nav class="pagination">
-        <button class="btn navy" id="prev">← Предишна страница</button>
-        <span id="count">Страница 1 от 4</span>
-        <button class="btn navy" id="next">Следваща страница →</button>
-    </nav>
+    <!-- Обновена навигация — запазва съществуващите страници -->
+
+<nav class="pagination" aria-label="Навигация между страниците">
+
+    <button class="btn navy" id="prev" type="button">
+
+        ← Предишна страница
+
+    </button>
+
+    <span id="count" aria-live="polite">Страница 1 от 4</span>
+
+    <button class="btn navy" id="next" type="button">
+
+        Следваща страница →
+
+    </button>
+
+</nav>
 </main>
         
 <footer>© Групкар Мобил · grupcar@abv.bg</footer>
