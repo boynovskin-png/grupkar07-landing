@@ -610,5 +610,62 @@
         📅 Запази час
     </a>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const pages = document.querySelectorAll('section.page');
+        const prevBtns = document.querySelectorAll('.page-prev');
+        const nextBtns = document.querySelectorAll('.page-next');
+        const pageCounts = document.querySelectorAll('.page-count');
+        
+        let currentPage = 1;
+        const totalPages = pages.length > 0 ? pages.length : 1;
+
+        function updatePagination() {
+            // Показва/скрива страниците
+            pages.forEach((page, index) => {
+                if (index + 1 === currentPage) {
+                    page.classList.add('active');
+                    page.style.display = 'block';
+                } else {
+                    page.classList.remove('active');
+                    page.style.display = 'none';
+                }
+            });
+
+            // Обновява текста за страницата (напр. "Страница 1 от 3")
+            pageCounts.forEach(el => {
+                el.textContent = `Страница ${currentPage} от ${totalPages}`;
+            });
+
+            // Задава състояние на бутоните (disabled в началото/края)
+            prevBtns.forEach(btn => btn.disabled = currentPage === 1);
+            nextBtns.forEach(btn => btn.disabled = currentPage === totalPages);
+        }
+
+        prevBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                if (currentPage > 1) {
+                    currentPage--;
+                    updatePagination();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
+
+        nextBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    updatePagination();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Инициализация при зареждане
+        updatePagination();
+    });
+</script>
 </body>
 </html>
